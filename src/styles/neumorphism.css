@@ -1,0 +1,291 @@
+/* Estilos base para elementos neumórficos */
+:root {
+  --primary: #FFD700; /* Amarelo */
+  --secondary: #4CAF50; /* Verde */
+  --dark: #1A1A1A; /* Preto */
+  --light: #F0F0F0; /* Cinza claro */
+  --white: #FFFFFF; /* Branco */
+  
+  /* Variáveis para sombras neumórficas */
+  --nm-bg: var(--light);
+  --nm-shadow-small: 3px 3px 6px rgba(0, 0, 0, 0.15), -3px -3px 6px rgba(255, 255, 255, 0.8);
+  --nm-shadow-medium: 5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.8);
+  --nm-shadow-large: 10px 10px 20px rgba(0, 0, 0, 0.15), -10px -10px 20px rgba(255, 255, 255, 0.8);
+  
+  /* Sombras para elementos pressionados */
+  --nm-inset-small: inset 3px 3px 6px rgba(0, 0, 0, 0.15), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+  --nm-inset-medium: inset 5px 5px 10px rgba(0, 0, 0, 0.15), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+  
+  /* Sombras para elementos coloridos */
+  --nm-shadow-primary: 5px 5px 10px rgba(180, 150, 0, 0.2), -5px -5px 10px rgba(255, 255, 150, 0.7);
+  --nm-shadow-secondary: 5px 5px 10px rgba(0, 100, 0, 0.2), -5px -5px 10px rgba(150, 255, 150, 0.7);
+  
+  /* Transições suaves */
+  --nm-transition: all 0.3s ease;
+}
+
+/* Classes base para elementos neumórficos */
+.nm-flat {
+  background: var(--nm-bg);
+  border-radius: 15px;
+  box-shadow: var(--nm-shadow-medium);
+  transition: var(--nm-transition);
+}
+
+.nm-flat:hover {
+  box-shadow: var(--nm-shadow-large);
+}
+
+.nm-flat:active {
+  box-shadow: var(--nm-inset-medium);
+}
+
+.nm-concave {
+  background: linear-gradient(145deg, #d8d8d8, #ffffff);
+  border-radius: 15px;
+  box-shadow: var(--nm-shadow-medium);
+  transition: var(--nm-transition);
+}
+
+.nm-convex {
+  background: linear-gradient(145deg, #ffffff, #d8d8d8);
+  border-radius: 15px;
+  box-shadow: var(--nm-shadow-medium);
+  transition: var(--nm-transition);
+}
+
+.nm-inset {
+  background: var(--nm-bg);
+  border-radius: 15px;
+  box-shadow: var(--nm-inset-medium);
+  transition: var(--nm-transition);
+}
+
+/* Botões neumórficos */
+.nm-button {
+  background: var(--nm-bg);
+  border: none;
+  border-radius: 10px;
+  color: var(--dark);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 12px 24px;
+  box-shadow: var(--nm-shadow-medium);
+  transition: var(--nm-transition);
+}
+
+.nm-button:hover {
+  box-shadow: var(--nm-shadow-large);
+  transform: translateY(-2px);
+}
+
+.nm-button:active {
+  box-shadow: var(--nm-inset-medium);
+  transform: translateY(0);
+}
+
+.nm-button-primary {
+  background: var(--primary);
+  color: var(--dark);
+  box-shadow: var(--nm-shadow-primary);
+}
+
+.nm-button-secondary {
+  background: var(--secondary);
+  color: var(--white);
+  box-shadow: var(--nm-shadow-secondary);
+}
+
+/* Cards neumórficos */
+.nm-card {
+  background: var(--nm-bg);
+  border-radius: 20px;
+  box-shadow: var(--nm-shadow-medium);
+  padding: 20px;
+  transition: var(--nm-transition);
+}
+
+.nm-card:hover {
+  box-shadow: var(--nm-shadow-large);
+  transform: translateY(-5px);
+}
+
+/* Inputs neumórficos */
+.nm-input {
+  background: var(--nm-bg);
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--nm-inset-medium);
+  color: var(--dark);
+  outline: none;
+  padding: 12px 20px;
+  transition: var(--nm-transition);
+  width: 100%;
+}
+
+.nm-input:focus {
+  box-shadow: var(--nm-inset-small);
+}
+
+/* Ícones neumórficos */
+.nm-icon {
+  align-items: center;
+  background: var(--nm-bg);
+  border-radius: 50%;
+  box-shadow: var(--nm-shadow-small);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  transition: var(--nm-transition);
+  width: 50px;
+}
+
+.nm-icon:hover {
+  box-shadow: var(--nm-shadow-medium);
+  transform: translateY(-2px);
+}
+
+.nm-icon:active {
+  box-shadow: var(--nm-inset-small);
+  transform: translateY(0);
+}
+
+/* Animações para elementos neumórficos */
+@keyframes nm-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nm-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nm-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nm-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nm-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nm-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Classes de animação */
+.nm-animate-fade {
+  animation: nm-fade-in 0.5s ease forwards;
+}
+
+.nm-animate-up {
+  animation: nm-slide-up 0.5s ease forwards;
+}
+
+.nm-animate-down {
+  animation: nm-slide-down 0.5s ease forwards;
+}
+
+.nm-animate-left {
+  animation: nm-slide-left 0.5s ease forwards;
+}
+
+.nm-animate-right {
+  animation: nm-slide-right 0.5s ease forwards;
+}
+
+.nm-animate-scale {
+  animation: nm-scale 0.5s ease forwards;
+}
+
+/* Atrasos para animações em cascata */
+.nm-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.nm-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.nm-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.nm-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.nm-delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Utilitários para cores neumórficas */
+.nm-bg-light {
+  background-color: var(--light);
+}
+
+.nm-bg-primary {
+  background-color: var(--primary);
+}
+
+.nm-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.nm-text-dark {
+  color: var(--dark);
+}
+
+.nm-text-light {
+  color: var(--light);
+}
+
+.nm-text-primary {
+  color: var(--primary);
+}
+
+.nm-text-secondary {
+  color: var(--secondary);
+}
