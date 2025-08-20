@@ -46,7 +46,7 @@ const Team = ({
   const teamMembers: TeamMember[] = [
     {
       initials: "RC",
-      name: "Rodrigo Costa",
+      name: "Rodrigo",
       roles: "Engenharia | Inovação Tecnológica | BI",
       description: "Especialista em soluções tecnológicas para engenharia de computação, IoT e sistemas embarcados, com sólida experiência em integração de sistemas, engenharia de computação e análise de dados aplicada ao setor financeiro.",
       delay: 100
@@ -59,15 +59,15 @@ const Team = ({
       delay: 200
     },
     {
-      initials: "MS",
-      name: "Mariana Silva",
+      initials: "DG",
+      name: "Digo",
       roles: "UX/UI Design | Frontend Development",
       description: "Especialista em criar experiências de usuário intuitivas e interfaces modernas, com foco em usabilidade e acessibilidade para aplicações web e mobile.",
       delay: 300
     },
     {
-      initials: "PL",
-      name: "Pedro Lima",
+      initials: "BB",
+      name: "Bibo",
       roles: "DevOps | Cloud Infrastructure | Security",
       description: "Arquiteto de soluções em nuvem com expertise em implementação de pipelines CI/CD, automação de infraestrutura e implementação de medidas de segurança em ambientes cloud.",
       delay: 400
