@@ -9,5 +9,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/dibitech-react/", 
+  build: {
+    outDir: "dist",
+    sourcemap: false 
+  }
 })
-
